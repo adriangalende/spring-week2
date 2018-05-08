@@ -38,4 +38,10 @@ public class ControllerContactos {
     public Persona obtenerContacto(@PathVariable String id){
           return  agendaService.recupera(id);
     }
+
+    @RequestMapping("/afegir")
+    @ResponseBody
+    public void addContacto(String id, String nom, String telefon){
+        agendaService.inserta(id, nom, telefon);
+    }
 }
