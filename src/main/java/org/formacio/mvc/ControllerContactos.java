@@ -39,7 +39,7 @@ public class ControllerContactos {
           return  agendaService.recupera(id);
     }
 
-    @RequestMapping("/afegir")
+    @RequestMapping(path = "/afegir", method = RequestMethod.POST)
     @ResponseBody
     public void addContacto(String id, String nom, String telefon){
         agendaService.inserta(id, nom, telefon);
