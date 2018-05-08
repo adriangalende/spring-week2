@@ -32,7 +32,8 @@ public class ControllerContactos {
     }
 
     //produces no es necesario, pero lo he usado para practicarlo
-    @RequestMapping(value = "/contacte/{id}",produces=MediaType.APPLICATION_JSON_UTF8_VALUE)
+    @RequestMapping(value = "/contacte/{id}",produces={MediaType.APPLICATION_JSON_UTF8_VALUE,
+                                                        MediaType.APPLICATION_XML_VALUE})
     @ResponseBody
     public Persona obtenerContacto(@PathVariable String id){
           return  agendaService.recupera(id);
