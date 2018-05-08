@@ -79,7 +79,7 @@ public class PracticaSetmana2ApplicationTests {
 	public void test_contacte_xml() throws Exception {
 		mockMvc.perform(get("/contacte/lin").accept(MediaType.APPLICATION_XML))
 				.andExpect(status().isOk())
-				.andExpect(content().xml("<persona><clau>lin</clau><nom>Lina</nom><telefon>971-555888</telefon></persona>"));
+				.andExpect(content().xml("<Persona><clau>lin</clau><nom>Lina</nom><telefon>971-555888</telefon></Persona>"));
 	}
 
 
